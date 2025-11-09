@@ -1,0 +1,218 @@
+/* Estilos específicos para la página de login */
+
+.login-container {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe8db 100%);
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 60px 70px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+    color: #8b0000;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group .icon {
+    font-size: 18px;
+}
+
+.form-group input {
+    padding: 16px 18px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff6f3c;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 111, 60, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+/* Error messages */
+.error-message {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    font-weight: 500;
+}
+
+.error-message.active {
+    display: block;
+}
+
+.form-group input.error {
+    border-color: #f44336;
+    background-color: #fff5f5;
+}
+
+/* ¿Olvidaste tu contraseña? */
+.forgot-password {
+    text-align: right;
+    margin-top: -15px;
+}
+
+.forgot-password .link {
+    color: #d84315;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.forgot-password .link:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío */
+.btn-submit {
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Link de registro */
+.register-link {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.register-link a {
+    color: #d84315;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 40px 30px;
+    }
+
+    .login-title {
+        font-size: 32px;
+    }
+
+    .login-subtitle {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+
+    .form-group input {
+        padding: 14px 16px;
+    }
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-box {
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Mensaje de error general */
+.alert-error {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #f44336;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.alert-error.active {
+    display: block;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}

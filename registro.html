@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Colombia Artesanal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Colombia Artesanal" style="width: 280%; height: 280%; object-fit: contain;">
+            </div>
+            <div class="logo-text">
+                COLOMBIA<br>ARTESANAL
+            </div>
+        </div>
+        <nav class="nav-buttons">
+            <button class="btn" onclick="window.location.href='login.html'">INICIAR SESIÓN</button>
+            <button class="btn" onclick="window.location.href='index.html'">INICIO</button>
+        </nav>
+    </header>
+
+    <!-- Formulario de Registro -->
+    <main class="registro-container">
+        <div class="registro-box">
+            <h1 class="registro-title">¡Bienvenidos! 🎨</h1>
+            <p class="registro-subtitle">Completa el formulario para comenzar tu viaje por el mundo artesanal colombiano</p>
+
+            <form id="registroForm" class="registro-form">
+                <!-- Nombres -->
+                <div class="form-group">
+                    <label for="nombres">
+                        <span class="icon">👤</span>
+                        NOMBRES*
+                    </label>
+                    <input 
+                        type="text" 
+                        id="nombres" 
+                        name="nombres" 
+                        placeholder="Ingresa tus nombres"
+                        required
+                    >
+                    <span class="error-message" id="error-nombres"></span>
+                </div>
+
+                <!-- Apellidos -->
+                <div class="form-group">
+                    <label for="apellidos">
+                        <span class="icon">👤</span>
+                        APELLIDOS*
+                    </label>
+                    <input 
+                        type="text" 
+                        id="apellidos" 
+                        name="apellidos" 
+                        placeholder="Ingresa tus apellidos"
+                        required
+                    >
+                    <span class="error-message" id="error-apellidos"></span>
+                </div>
+
+                <!-- Celular -->
+                <div class="form-group">
+                    <label for="celular">
+                        <span class="icon">📱</span>
+                        CELULAR*
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="celular" 
+                        name="celular" 
+                        placeholder="Ej: 3001234567"
+                        required
+                    >
+                    <span class="error-message" id="error-celular"></span>
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                    <label for="correo">
+                        <span class="icon">📧</span>
+                        CORREO*
+                    </label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        name="correo" 
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+                    <span class="error-message" id="error-correo"></span>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <label for="password">
+                        <span class="icon">🔒</span>
+                        CONTRASEÑA*
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Mínimo 6 caracteres"
+                        required
+                    >
+                    <span class="error-message" id="error-password"></span>
+                </div>
+
+                <!-- Verificar Contraseña -->
+                <div class="form-group">
+                    <label for="verificar-password">
+                        <span class="icon">🔒</span>
+                        VERIFICAR CONTRASEÑA*
+                    </label>
+                    <input 
+                        type="password" 
+                        id="verificar-password" 
+                        name="verificar-password" 
+                        placeholder="Repite tu contraseña"
+                        required
+                    >
+                    <span class="error-message" id="error-verificar"></span>
+                </div>
+
+                <!-- Dirección -->
+                <div class="form-group">
+                    <label for="direccion">
+                        <span class="icon">📍</span>
+                        DIRECCIÓN*
+                    </label>
+                    <input 
+                        type="text" 
+                        id="direccion" 
+                        name="direccion" 
+                        placeholder="Calle, número, barrio"
+                        required
+                    >
+                    <span class="error-message" id="error-direccion"></span>
+                </div>
+
+                <!-- Fecha de Nacimiento -->
+                <div class="form-group">
+                    <label for="fecha-nacimiento">
+                        <span class="icon">📅</span>
+                        FECHA DE NACIMIENTO*
+                    </label>
+                    <input 
+                        type="date" 
+                        id="fecha-nacimiento" 
+                        name="fecha-nacimiento" 
+                        required
+                    >
+                    <span class="error-message" id="error-fecha"></span>
+                </div>
+
+                <!-- Términos y Condiciones -->
+                <div class="form-check">
+                    <input 
+                        type="checkbox" 
+                        id="terminos" 
+                        name="terminos" 
+                        required
+                    >
+                    <label for="terminos">
+                        Acepto los <a href="#" class="link">términos y condiciones</a> y la <a href="#" class="link">política de privacidad</a>
+                    </label>
+                    <span class="error-message" id="error-terminos"></span>
+                </div>
+
+                <!-- Botón de Enviar -->
+                <button type="submit" class="btn-submit">CREAR MI CUENTA</button>
+
+                <!-- Link a Login -->
+                <p class="login-link">
+                    ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Política de Privacidad</a>
+            <a href="#" class="footer-link">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <script src="js/registro.js"></script>
+</body>
+</html>
